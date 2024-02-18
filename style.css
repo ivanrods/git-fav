@@ -1,0 +1,163 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    font-size: 62.5%;
+    --ff-primaty: 'Roboto', sans-serif;
+    --text-color: #E1E1E6;
+    --primary-color: #092D38;
+    --secondary-color: #4A808C;
+    --tr-color: #06181C;
+    --tr2-color: #030c0f;
+    --button-color: #065E7C;
+    --remove-color: #F75A68;
+    --table-color: #4E5455;
+    --input-color: #06181C;
+    --input-text-color: #7C7C8A;
+}
+body{
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: black;
+}
+.sr-only{
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+#app{
+    padding: 2rem;
+    max-width: 1120px;
+    margin: 0 auto;
+    
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 7rem 0 7rem 0;
+}
+.logo{
+    width: 186px;
+}
+section{
+    display: flex;
+    gap: .8rem;
+}
+input{
+    width: 40.6rem;
+    background-color: var(--input-color);
+    color: var(--input-text-color);
+    padding: 1.6rem;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+header button{
+    display: flex;
+    align-items: center;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    padding: 1.2rem 3.2rem 1.2rem 3.2rem;
+    gap: 8px;
+    border-radius: .4rem;
+    border: none;
+    cursor: pointer;
+}
+svg{
+    height: 22.5px;
+}
+
+
+table{
+    width: 100%;
+    font-family: var(--ff-primaty);
+    font-size: 2rem;
+    color: var(--text-color);
+    border-collapse: collapse;
+    
+}
+table th{
+    background-color: var(--primary-color);
+    text-align: left;
+    padding: 2.5rem  0rem  2.5rem 4rem;
+    
+}
+table tr {
+    background: var(--tr-color);
+    
+    
+}
+
+table th:first-child {
+    border-top-left-radius: 1rem;
+    
+}
+table th:last-child {
+    border-top-right-radius: .8rem;
+}
+
+table tr:nth-child(odd){
+    background: var(--tr2-color);
+}
+table td {
+    padding: 2.5rem  0rem  2.5rem 4rem;
+    text-align: left;
+    
+}
+td.user{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+td.user img{
+    width: 7rem;
+    height:7rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+td.user a {
+    color: var(--text-color);
+    text-decoration: none;
+    line-height: 3rem;
+}
+td.user a p{
+    font-weight: bold;
+}
+td .remove{
+    background: none;
+    color: var(--remove-color);
+    border: none;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+.container{
+    display: flex;
+    height: 60rem;
+    background-color: var(--tr2-color);
+    align-items: center;
+    justify-content: center;
+    gap: 6rem;
+    
+}
+.container img{
+    height: 13rem;
+}
+h1{
+    font-family: "Roboto Mono", monospace;
+    color: var(--table-color);
+}
+
