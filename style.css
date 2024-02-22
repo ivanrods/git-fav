@@ -80,20 +80,44 @@ svg{
     height: 22.5px;
 }
 
+header button:hover{
+    background-color: var(--text-color);
+    color: var(--secondary-color);
+    transition: all .7s ease;
+}
+header button:hover svg path{
+    fill: var(--secondary-color);
+  transition: all .7s ease;
+}
 
+
+.table{
+    width: 100%;
+    max-height: 55rem;
+    border: 3px solid var(--secondary-color);
+    border-radius: 1.3rem;
+    
+}
+
+.scroll{
+    overflow-y: scroll;
+    
+}
 table{
     width: 100%;
+    overflow: hidden;
     font-family: var(--ff-primaty);
     font-size: 2rem;
     color: var(--text-color);
     border-collapse: collapse;
+    
+    border-radius: 1rem 1rem 0 0;
     
 }
 table th{
     background-color: var(--primary-color);
     text-align: left;
     padding: 2.5rem  0rem  2.5rem 4rem;
-    
 }
 table tr {
     background: var(--tr-color);
@@ -101,13 +125,11 @@ table tr {
     
 }
 
-table th:first-child {
-    border-top-left-radius: 1rem;
+table tbody tr{
+    border-bottom: 1px solid var(--secondary-color);
     
 }
-table th:last-child {
-    border-top-right-radius: .8rem;
-}
+
 
 table tr:nth-child(odd){
     background: var(--tr2-color);
@@ -117,6 +139,13 @@ table td {
     text-align: left;
     
 }
+table:first-child {
+    border-top-left-radius: 1rem;
+}
+table:last-child {
+    border-top-right-radius: 1rem;
+}
+
 td.user{
     display: flex;
     align-items: center;
@@ -146,11 +175,14 @@ td .remove{
 }
 .container{
     display: flex;
-    height: 60rem;
+    overflow: hidden;
+    height: 45rem;
     background-color: var(--tr2-color);
     align-items: center;
     justify-content: center;
     gap: 6rem;
+    border-bottom-left-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
     
 }
 .container img{
@@ -160,4 +192,22 @@ h1{
     font-family: "Roboto Mono", monospace;
     color: var(--table-color);
 }
+/*
+
+*/
+.table::-webkit-scrollbar {
+    width: .2rem;
+    color: #065E7C;
+    position: absolute;
+    right: 0;
+  }
+  
+.table::-webkit-scrollbar-thumb{
+    background-color: var(--secondary-color);
+    
+    border-radius: 1rem;
+  
+    border: .8rem solid rgba(0, 0, 0, 0);
+   
+  }
 
